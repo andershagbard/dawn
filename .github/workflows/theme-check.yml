@@ -1,0 +1,25 @@
+name: Theme Check
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  theme-check:
+    permissions: write-all
+    name: Theme Check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: oven-sh/setup-bun@v1
+      - name: Setup bun
+        with:
+        bun-version: latest
+
+      - uses: actions/checkout@v4
+      - name: Theme Check
+        uses: andershagbard/theme-check-action@package-manager-support
+        with:
+          token: ${{ github.token }}
+          base: main
