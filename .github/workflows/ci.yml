@@ -19,6 +19,11 @@ jobs:
     name: Theme Check
     runs-on: ubuntu-latest
     steps:
+      - uses: oven-sh/setup-bun@v1
+      - name: Setup bun
+        with:
+        bun-version: latest
+
       - uses: actions/checkout@v3
       - name: Theme Check
         uses: andershagbard/theme-check-action@package-manager-support
