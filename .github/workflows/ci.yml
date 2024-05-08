@@ -21,6 +21,6 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Theme Check
-        uses: shopify/theme-check-action@v1
+        uses: andershagbard/theme-check-action@package-manager-support
         with:
           token: ${{ github.token }}
