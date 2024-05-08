@@ -20,7 +20,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: oven-sh/setup-bun@v1
-      - name: Setup bun
         with:
           bun-version: latest
 
